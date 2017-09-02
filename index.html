@@ -6,16 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
-
-    <style>
-        *{
-            font-family: 'Lato', sans-serif;
-        }
-        body{
-            background-color: #eeeeee;
-        }
-    </style>
-
+    <link href="css/estilo.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 <body>
@@ -25,63 +16,48 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-
+            <div class="col-md-12 table-responsive">
                 <table id="cart" class="table">
                     <thead>
-                    <tr style="background-color: #8c8c8c; color: white">
+                    <tr style="background-color: #8c8c8c; color: white;">
+                        <th>
+                            DESCRICAO
+                        </th>
                         <th colspan="1">
-                            PRODUTO
+                            TAMANHO
                         </th>
                         <th>
-                            Preço
+                            VALOR
                         </th>
-                        <th>
-                            Quantidade
+                        <th colspan="2">
+                            QUANTIDADE
                         </th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr class="produto">
-                        <td>
-                            <div class="product">
-                                <select name="tipo" class="selecionar">
-                                    <option style="display: none" value="" default>Selecione</option>
-                                    <option value="9.90">MARMITA PEQUENA</option>
-                                    <option value="19.90">MARMITA MEDIA</option>
-                                    <option value="29.90">MARMITA GRANDE</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="small"><div>R$  <span id="1" class="preco">0.0</span></div></td>
-                        <td class="small">
-                            <input class="quantidade" type="number" value="1" size="3" maxlength="3" min="1" max="10" step="1">
-                        </td>
-                    </tr>
-                    <tr class="produto">
-                        <td>
-                            <div class="product">
-                                <select name="tipo" class="selecionar">
-                                    <option style="display: none" value="" default>Selecione</option>
-                                    <option value="9.90">MARMITA PEQUENA</option>
-                                    <option value="19.90">MARMITA MEDIA</option>
-                                    <option value="29.90">MARMITA GRANDE</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td class="small"><div>R$  <span class="preco">0.0</span></div></td>
-                        <td class="small">
-                            <input class="quantidade" type="number" value="1" size="3" maxlength="3" min="1" max="10" step="1">
-                        </td>
-                    </tr>
-                    <tr class="footer">
-                        <td></td>
-                        <td>Total da compra</td>
-                        <td><div>R$ <span id="total"></span>0</div></td>
-                        <td></td>
-                    </tr>
+                    <tbody id="list-produtos">
+
+                    </tbody>
+                    <tbody class="">
+
                     </tbody>
                 </table>
+                <div>
+                    <form action="" method="post" class="form">
+                        <table class="table" id="resultado">
+                            <tbody>
+                            <tr class="footer pull-right">
+                                <td style="width: 150px;">Total da compra</td>
+                                <td style="width: 150px; text-align: right"><div>R$ <span id="total"></span>0</div></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="col-md-8">
+                    <button id="add-item" class="btn btn-primary">ADD ITEM</button>
+                    <button type="submit" id="bt-enviar" class="btn btn-success">ENVIAR</button>
+                </div>
+
             </div>
         </div>
     </div>

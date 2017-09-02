@@ -1,0 +1,20 @@
+<tr class="produto" id="">
+    <td><div><input type="text" size="40" maxlength="40" placeholder="Tipo do produto"></div></td>
+    <td>
+        <div class="product">
+            <select name="tipo" class="selecionar">
+                <option style="display: none" value="" default>Selecione</option>
+                <option value="9.90">MARMITA PEQUENA</option>
+                <option value="19.90">MARMITA MEDIA</option>
+                <option value="29.90">MARMITA GRANDE</option>
+            </select>
+        </div>
+    </td>
+    <td class="small"><div>R$  <span id="1" class="preco">0.0</span></div></td>
+    <td class="small">
+        <input class="quantidade" type="number" value="1" size="3" maxlength="3" min="1" max="10" step="1">
+    </td>
+    <td>
+        <button type="button" class="btn btn-danger remover pull-right" onclick="remover(this)">Excluir</button>
+    </td>
+</tr>
